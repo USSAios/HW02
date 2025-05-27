@@ -50,6 +50,10 @@ public:
 	{
 		animals[cagenum] = animal;
 		cagenum++;
+
+		if (cagenum >= 10) {
+			cout << "가득참!" << endl;
+		}
 	}
 
 	void performActions()
@@ -90,7 +94,7 @@ int main()
 {
 	Zoo zoo;
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 11; i++)
 	{
 		zoo.addAnimal(createRamdomAnimal());
 	}
